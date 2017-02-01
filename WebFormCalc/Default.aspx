@@ -29,7 +29,7 @@
                 -->
 
             <div class="inputs">
-                <input class="form-control" type="number" step="any" name="leftNum" />
+                <input class="form-control" type="number" step="any" name="leftNum" value="<%=results %>" />
             </div>
 
             <!--Operator Selection-->
@@ -44,7 +44,7 @@
 
             <!--Right Number-->
             <div class="inputs">
-                <input class="form-control" type="number" step="any" name="rightNum" />
+                <input class="form-control" type="number" step="any" name="rightNum" value="0"/>
             </div>
             <br />
 
