@@ -26,3 +26,7 @@
     display: inline-block;
     margin: 0 5px 0 5px;
 }
+
+.medfont {
+    font-size: medium;
+}

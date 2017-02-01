@@ -10,37 +10,54 @@
 </head>
 <body>
 
-    <form id="form1" runat="server">
-        <span class="calculator">
-            <h1>This is my caluclator.</h1>
+    <div class="calculator">
+
+        <!--Heading-->
+        <h1>This is my caluclator.</h1>
+
+        <!--Form-->
+        <form id="form1" runat="server">
+
             <!--Left Number-->
-            <span class="inputs">
+            <div class="inputs">
                 <input class="form-control" type="number" name="leftNum" />
-            </span>
+            </div>
+
             <!--Operator Selection-->
-            <%--<div class="form-group">
-                <select name="Winner">
+            <div class="form-group inputs">
+                <select class="form-control medfont" name="Winner">
                     <% foreach (var option in Options)
                         { %>
                     <option value="<%=option.ToLower() %>"><%= option %></option>
                     <% } %>
                 </select>
-            </div>--%>
-            <span class="inputs">
-                <div class="form-group">
-                    <select class="form-control" name="operator">
-                        <option>+</option>
-                        <option>-</option>
-                    </select>
-                </div>
-            </span>
+            </div>
 
             <!--Right Number-->
-            <span class="inputs">
+            <div class="inputs">
                 <input class="form-control" type="number" name="rightNum" />
-            </span></span>
+            </div>
+            <br />
 
-    </form>
+            <!--Submit Button
+                http://stackoverflow.com/questions/477691/submitting-a-form-by-pressing-enter-without-a-submit-button
+                -->
+            <div class="inputs">
+                <input type="submit"
+                    style="position: absolute; left: -9999px; width: 1px; height: 1px;"
+                    tabindex="-1" />
+            </div>
+
+            <!--Results-->
+                <% if (Winner == "+")
+                    { %>
+                <h3>
+                    <%=leftNum %> <%=Winner %> <%= rightNum %>
+                </h3>
+                <% } %>
+
+        </form>
+    </div>
 
 </body>
 </html>
