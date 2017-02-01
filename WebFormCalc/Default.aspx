@@ -25,7 +25,7 @@
 
             <!--Operator Selection-->
             <div class="form-group inputs">
-                <select class="form-control medfont" name="Winner">
+                <select class="form-control medfont" name="operation">
                     <% foreach (var option in Options)
                         { %>
                     <option value="<%=option.ToLower() %>"><%= option %></option>
@@ -47,15 +47,14 @@
                     style="position: absolute; left: -9999px; width: 1px; height: 1px;"
                     tabindex="-1" />
             </div>
+            <sub>Psst... press enter to calculate!</sub>
 
             <!--Results-->
-                <% if (Winner == "+")
-                    { %>
-                <h3>
-                    <%=leftNum %> <%=Winner %> <%= rightNum %>
-                </h3>
-                <% } %>
-
+            
+            <h3>
+                <%=results %>
+            </h3>
+             
         </form>
     </div>
 
