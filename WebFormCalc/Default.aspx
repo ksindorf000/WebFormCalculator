@@ -6,13 +6,41 @@
 <head runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="Content/appstyle.css" rel="stylesheet" type="text/css" />
-    <title></title>
+    <title>Simple Calculator</title>
 </head>
 <body>
+
     <form id="form1" runat="server">
-        <div class="calculator">
+        <span class="calculator">
             <h1>This is my caluclator.</h1>
-        </div>
+            <!--Left Number-->
+            <span class="inputs">
+                <input class="form-control" type="number" name="leftNum" />
+            </span>
+            <!--Operator Selection-->
+            <%--<div class="form-group">
+                <select name="Winner">
+                    <% foreach (var option in Options)
+                        { %>
+                    <option value="<%=option.ToLower() %>"><%= option %></option>
+                    <% } %>
+                </select>
+            </div>--%>
+            <span class="inputs">
+                <div class="form-group">
+                    <select class="form-control" name="operator">
+                        <option>+</option>
+                        <option>-</option>
+                    </select>
+                </div>
+            </span>
+
+            <!--Right Number-->
+            <span class="inputs">
+                <input class="form-control" type="number" name="rightNum" />
+            </span></span>
+
     </form>
+
 </body>
 </html>
