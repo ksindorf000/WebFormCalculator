@@ -6,6 +6,7 @@
 <head runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="Content/appstyle.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.png" />
     <title>Simple Calculator</title>
 </head>
 <body>
@@ -44,7 +45,7 @@
 
             <!--Right Number-->
             <div class="inputs">
-                <input class="form-control" type="number" step="any" name="rightNum" value="0"/>
+                <input class="form-control" type="number" step="any" name="rightNum" value="0" />
             </div>
             <br />
 
@@ -56,7 +57,9 @@
                     style="position: absolute; left: -9999px; width: 1px; height: 1px;"
                     tabindex="-1" />
             </div>
-            <sub>Psst... press enter to calculate!</sub>
+            <sub>Psst... press enter to calculate!<br />
+                Also... check out the favicon!!! :D 
+            </sub>
 
             <!--Results-->
 
