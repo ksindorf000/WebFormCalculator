@@ -13,14 +13,23 @@
     <div class="calculator">
 
         <!--Heading-->
-        <h1>This is my caluclator.</h1>
+        <h1>Here's a calculator because<br />
+            math sucks.
+        </h1>
+
+        <br />
 
         <!--Form-->
         <form id="form1" runat="server">
 
             <!--Left Number-->
+
+            <!--For handling decimal values:
+                http://stackoverflow.com/questions/19011861/is-there-a-float-input-type-in-html5
+                -->
+
             <div class="inputs">
-                <input class="form-control" type="number" name="leftNum" />
+                <input class="form-control" type="number" step="any" name="leftNum" />
             </div>
 
             <!--Operator Selection-->
@@ -35,7 +44,7 @@
 
             <!--Right Number-->
             <div class="inputs">
-                <input class="form-control" type="number" name="rightNum" />
+                <input class="form-control" type="number" step="any" name="rightNum" />
             </div>
             <br />
 
@@ -50,11 +59,11 @@
             <sub>Psst... press enter to calculate!</sub>
 
             <!--Results-->
-            
+
             <h3>
-               <%=rString %>
+                <%=rString %>
             </h3>
-             
+
         </form>
     </div>
 
