@@ -52,7 +52,7 @@
             <!--Results-->
             
             <h3>
-                <%=results %>
+               <%=rString %>
             </h3>
              
         </form>

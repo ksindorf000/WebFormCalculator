@@ -8,11 +8,12 @@ using System.Web.UI.WebControls;
 public partial class _Default : System.Web.UI.Page
 {
     //Class level attribute - accessible to markup files
-    public List<string> Options = new List<string>() { "+", "-", "*" };
+    public List<string> Options = new List<string>() { "+", "-", "*", "/" };
     public string leftNum;
     public string operation;
     public string rightNum;
     public float results;
+    public string rString;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -35,13 +36,34 @@ public partial class _Default : System.Web.UI.Page
                 case "*":
                     results = float.Parse(leftNum) * float.Parse(rightNum);
                     break;
+                case "/":
+                    //Division();
+                    results = float.Parse(leftNum) / float.Parse(rightNum);
+                    break;
                 default:
                     results = 0;
                     break;
             }
 
-
+            rString = $"{leftNum} {operation} {rightNum} = {results}";
         }
+    }
+    
+    protected void Division()
+    {
+        if (leftNum == "0")
+        {
+            results = float.Parse(rightNum);
+        }
+        else if (rightNum == "0")
+        {
+            results = float.Parse(leftNum);
+        }
+        else
+        {
+            results = float.Parse(leftNum) / float.Parse(rightNum);
+        }
+
     }
     
 }
