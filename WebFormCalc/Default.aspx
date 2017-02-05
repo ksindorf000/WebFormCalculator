@@ -14,8 +14,7 @@
     <div class="calculator">
 
         <!--Heading-->
-        <h1>Here's a calculator because<br />
-            math sucks.
+        <h1>Here's a calculator, just because.<br />
         </h1>
 
         <br />
